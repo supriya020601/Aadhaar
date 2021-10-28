@@ -1,0 +1,19 @@
+.form
+{
+    max-width: 75%;
+    margin: auto;
+    border: 1px solid black;
+    padding: 20px 50px;
+    
+}
+
+input
+{
+    width: 75%;
+    margin-top: 2px;
+    margin-bottom: 5px;
+}
+.form-check-input{
+    width: 15px;
+   
+}
