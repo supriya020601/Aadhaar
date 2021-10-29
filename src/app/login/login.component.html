@@ -1,8 +1,14 @@
+<form #ref="ngForm" (ngSubmit)="onChange(ref.value); ref.reset()" class="form mt-5" >
 <div class="mb-3">
-    <label for="exampleFormControlInput1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+    <label for="exampleFormControlInput1" class="form-label">Aadhar Number</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" name="Aadhaar" ngModel>
   </div>
-  <div class="mb-3">
-    <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-  </div>
+  
+  <button type="submit" class="btn btn-primary d-block mx-auto" >Update Aadhar</button>
+</form>
+
+
+
+<div *ngFor="let i of ans|keyvalue">
+<h4 *ngIf="i.value!=null && i.key!='_id'&& i.key!='Agree'">{{i.key}}:{{i.value}}</h4>
+</div>
