@@ -40,16 +40,16 @@ userApi.get("/getaadhaar/:obj",expressErrorHandler(async (req,res,next)=>{
     //if user existed
     console.log(user)
     if(user!=null){
-        
-        if(user.Village===user.Subdistrict && user.Subdistrict===user.District){
+
+        if(user.Village.toLowerCase()===user.Subdistrict.toLowerCase() && user.Subdistrict.toLowerCase()===user.District.toLowerCase()){
             user.Subdistrict=null;
             user.District=null;
         }
-        else if(user.Village===user.Subdistrict){
+        else if(user.Village.toLowerCase()===user.Subdistrict.toLowerCase()){
                 user.Subdistrict=null;
                 
         }
-        else if(user.District===user.Subdistrict){
+        else if(user.District.toLowerCase()===user.Subdistrict.toLowerCase()){
             user.District=null;
         }
 
